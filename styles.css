@@ -1,0 +1,67 @@
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+ .bg-gradient-blue {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #ea4335 100%);
+        }
+        .circle-bg {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+
+        .heading-txt {
+            display: inline-block;
+            animation: typing 3s steps(15) infinite alternate;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #6b7280;
+            vertical-align: top;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0ch;
+            }
+            to {
+                width: 14ch; /* "Azubike Allwell" is 15 characters */
+            }
+        }
+        
+        /* Alternative: Just animate the name part separately */
+        .name-container {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .typing-name {
+            animation: typing-name 3s steps(15) infinite alternate;
+            border-right: 2px solid #6b7280;
+        }
+        
+        @keyframes typing-name {
+            from {
+                width: 0;
+            }
+            to {
+                width: 14ch;
+            }
+        }
+        
+        /* Version with cursor blink */
+        .cursor-blink {
+            animation: typing 3s steps(15) infinite alternate,
+                      blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #6b7280; }
+        }
